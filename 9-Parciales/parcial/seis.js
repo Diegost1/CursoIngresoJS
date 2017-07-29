@@ -4,7 +4,7 @@ var contador=0;
 var numIngresados;
 var max;
 var min;
-bandera=true;
+var bandera=true;
 
 
 while(contador<24)
