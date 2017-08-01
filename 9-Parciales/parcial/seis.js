@@ -1,39 +1,37 @@
-function Mostrar()
+function Mostrar() 
 {
-var contador=0;
-var numIngresados;
+var contador = 0;
+var numIngresado;
 var max;
 var min;
-var bandera=true;
+var bandera = true;
 
 
-while(contador<24)
-{   
-    contador++;
-    numIngresados=prompt("Escriba el valor de las ventas(mayor a 0)");
-    while(numIngresados<0)
+while (contador < 24)
+{
+    numIngresado=prompt("Ingrese un numero")
+    while(numIngresado<0)
     {
-        numIngresados=prompt("Escriba el valor de las ventas(MAYOR A 0)");
+        numIngresado=prompt("INGRESE UN IMPORTE MAYOR A 0");
+        
     }
+    contador++;
     if(bandera)
     {
         bandera=false;
-        max=numIngresados;
-        min=numIngresados;
+        max=numIngresado;
+        min=numIngresado;
     }
-    else
-    {
-        if(numIngresados>max)
+    else 
+        if(numIngresado<max)
         {
-            max=numIngresados;
+            max=numIngresado;
         }
-    }
-        if(numIngresados<min)
+        if(numIngresado>min)
         {
-            min=numIngresados;
+            min=numIngresado;
         }
-   
+    
 }
-
-
+alert("El mayor importe fue: "+max+" y el menor importe fue: "+min);
 }

@@ -7,14 +7,13 @@ var min;
 var bandera=true;
 numIngresado=parseInt(numIngresado);
 
-while(contador<50)
+while(contador<5)
 {
     numIngresado=prompt("Ingrese un numero");
-    while(isNaN(numIngresado<0))
+    while(numIngresado<=0)
     {
         numIngresado=prompt("Ingrese solo numero mayores que 0");
     }
-    contador++;
     if(bandera)
     {
         bandera=false;
@@ -26,14 +25,14 @@ while(contador<50)
         if(numIngresado>max)
         {
             max=numIngresado;
-            alert("El mas pesado: "+max+" Kg");
         }
         if(numIngresado<min)
         {
             min=numIngresado;
-            alert("El menos pesado: "+min+" kg");
         }
-    }
+
+    }    
     contador++;
 }
+alert("El mas pesado fue: "+max+" Kg "+" y el menos pesado fue: "+min+" Kg");
 }
